@@ -48,17 +48,16 @@ function App() {
   };
 
   // highlight search term
+  const highlightSearchTerm = (title, query) => {
+    if (!query || typeof title !== 'string') return title;
 
-  // const highlightSearchTerm = (title, query) => {
-  //   if (!query) return title;
-
-  //   const parts = title.split(new RegExp(`(${query})`, 'gi'));
-  //   return parts.map((part, index) => 
-  //     part.toLowerCase() === query.toLowerCase() 
-  //     ? <mark key={index}>{part}</mark> 
-  //     : part
-  //   );
-  // };
+    const parts = title.split(new RegExp(`(${query})`, 'gi'));
+    return parts.map((part, index) => 
+      part.toLowerCase() === query.toLowerCase() 
+      ? <mark key={index}>{part}</mark> 
+      : part
+    );
+  };
 
   // Delete story
   const handleDeleteStory = (story) => {
@@ -86,7 +85,7 @@ function App() {
             key={index}
             story={story}
             query={query}
-            // highlightSearchTerm={highlightSearchTerm}
+            highlightSearchTerm={highlightSearchTerm}
             onClick={() => handleStorySelect(story)}
           />
         ))
