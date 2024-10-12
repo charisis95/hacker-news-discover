@@ -41,9 +41,8 @@ function App() {
   };
 
   const handleStorySelect = (story) => {
-    // Check if the story is already in the selected list
     if (!selectedStories.some(selectedStory => selectedStory.title === story.title)) {
-      setSelectedStories([...selectedStories, story]); // Add story to the selected list
+      setSelectedStories([...selectedStories, story]);
     }
   };
 
