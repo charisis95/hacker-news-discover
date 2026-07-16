@@ -2,6 +2,10 @@
 
 A simple, responsive Hacker News search app. Search stories through the Hacker News Algolia API and keep a temporary reading list while the app is open.
 
+## Live Demo
+
+[View the live application](https://your-project.vercel.app)
+
 ## Features
 
 - Debounced Hacker News story search
