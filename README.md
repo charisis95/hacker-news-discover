@@ -4,7 +4,7 @@ A simple, responsive Hacker News search app. Search stories through the Hacker N
 
 ## Live Demo
 
-[View the live application](https://your-project.vercel.app)
+[View the live application](https://hacker-news-discover.vercel.app/)
 
 ## Features
 
